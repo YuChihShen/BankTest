@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vqX-CA-m8R">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="tqS-gi-ra6">
+            <objects>
+                <navigationController id="vqX-CA-m8R" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bbs-AA-x44">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EbX-6w-ML2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1E-t1-Q7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1519" y="-3"/>
+        </scene>
+        <!--主頁-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoc-W2-c8Q">
+                                <rect key="frame" x="106.66666666666669" y="205.33333333333334" width="180" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Zoc-W2-c8Q" secondAttribute="height" multiplier="36:10" id="Myw-zc-CyQ"/>
+                                    <constraint firstAttribute="width" constant="180" id="a0O-nq-v2H"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="無好友" cornerStyle="large"/>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wZ-dj-FCF">
+                                <rect key="frame" x="106.66666666666669" y="297.33333333333331" width="180" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="0pj-uS-C4Z"/>
+                                    <constraint firstAttribute="width" secondItem="0wZ-dj-FCF" secondAttribute="height" multiplier="36:10" id="7RE-oW-64x"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="好友列表無邀請" cornerStyle="large"/>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97J-9F-vpg">
+                                <rect key="frame" x="106.66666666666669" y="389.33333333333331" width="180" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="97J-9F-vpg" secondAttribute="height" multiplier="36:10" id="2Ah-nK-uRW"/>
+                                    <constraint firstAttribute="width" constant="180" id="Jfv-vO-6VL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="好友列表含邀請好友" cornerStyle="large"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zoc-W2-c8Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DPL-Bd-ryr"/>
+                            <constraint firstItem="0wZ-dj-FCF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.7" id="ICm-rl-ie7"/>
+                            <constraint firstItem="Zoc-W2-c8Q" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.5" id="JKx-Tn-Lxf"/>
+                            <constraint firstItem="0wZ-dj-FCF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UVd-GW-d4E"/>
+                            <constraint firstItem="97J-9F-vpg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.9" id="XeX-rF-OEO"/>
+                            <constraint firstItem="97J-9F-vpg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="r0L-Jz-3Yk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="主頁" id="xQM-1d-eyG"/>
+                    <connections>
+                        <outlet property="viewButton1" destination="Zoc-W2-c8Q" id="Dcm-xY-P5r"/>
+                        <outlet property="viewButton2" destination="0wZ-dj-FCF" id="MGD-g1-cMh"/>
+                        <outlet property="viewButton3" destination="97J-9F-vpg" id="XbJ-5i-fuA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-669" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

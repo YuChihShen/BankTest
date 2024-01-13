@@ -13,6 +13,20 @@
 		6526D0702B50F6830037EE0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6526D06E2B50F6830037EE0F /* Main.storyboard */; };
 		6526D0722B50F6840037EE0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6526D0712B50F6840037EE0F /* Assets.xcassets */; };
 		6526D0752B50F6840037EE0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6526D0732B50F6840037EE0F /* LaunchScreen.storyboard */; };
+		6526D07D2B50F6AE0037EE0F /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526D07C2B50F6AE0037EE0F /* APIController.swift */; };
+		6526D0832B51145F0037EE0F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526D0812B51145F0037EE0F /* InfoViewController.swift */; };
+		6526D0842B51145F0037EE0F /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6526D0822B51145F0037EE0F /* InfoViewController.xib */; };
+		6526D0862B512B600037EE0F /* DataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526D0852B512B600037EE0F /* DataStruct.swift */; };
+		6526D0892B512DC80037EE0F /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526D0882B512DC80037EE0F /* InfoViewModel.swift */; };
+		6526D0912B5268A30037EE0F /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526D08F2B5268A30037EE0F /* FriendListViewController.swift */; };
+		6526D0922B5268A30037EE0F /* FriendListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6526D0902B5268A30037EE0F /* FriendListViewController.xib */; };
+		6526D0952B526C9B0037EE0F /* FriendViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526D0932B526C9B0037EE0F /* FriendViewCell.swift */; };
+		6526D0962B526C9B0037EE0F /* FriendViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6526D0942B526C9B0037EE0F /* FriendViewCell.xib */; };
+		6526D09C2B527EB00037EE0F /* FriendListSearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526D09B2B527EB00037EE0F /* FriendListSearchResultTableViewController.swift */; };
+		6526D0A72B52B2320037EE0F /* InvitationListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526D0A52B52B2320037EE0F /* InvitationListCollectionViewController.swift */; };
+		6526D0A82B52B2320037EE0F /* InvitationListCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6526D0A62B52B2320037EE0F /* InvitationListCollectionViewController.xib */; };
+		6526D0AB2B52B26E0037EE0F /* InvitationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526D0A92B52B26E0037EE0F /* InvitationCollectionViewCell.swift */; };
+		6526D0AC2B52B26E0037EE0F /* InvitationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6526D0AA2B52B26E0037EE0F /* InvitationCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +38,20 @@
 		6526D0712B50F6840037EE0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6526D0742B50F6840037EE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6526D0762B50F6840037EE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6526D07C2B50F6AE0037EE0F /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		6526D0812B51145F0037EE0F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		6526D0822B51145F0037EE0F /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		6526D0852B512B600037EE0F /* DataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStruct.swift; sourceTree = "<group>"; };
+		6526D0882B512DC80037EE0F /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
+		6526D08F2B5268A30037EE0F /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		6526D0902B5268A30037EE0F /* FriendListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListViewController.xib; sourceTree = "<group>"; };
+		6526D0932B526C9B0037EE0F /* FriendViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewCell.swift; sourceTree = "<group>"; };
+		6526D0942B526C9B0037EE0F /* FriendViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendViewCell.xib; sourceTree = "<group>"; };
+		6526D09B2B527EB00037EE0F /* FriendListSearchResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListSearchResultTableViewController.swift; sourceTree = "<group>"; };
+		6526D0A52B52B2320037EE0F /* InvitationListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationListCollectionViewController.swift; sourceTree = "<group>"; };
+		6526D0A62B52B2320037EE0F /* InvitationListCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvitationListCollectionViewController.xib; sourceTree = "<group>"; };
+		6526D0A92B52B26E0037EE0F /* InvitationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationCollectionViewCell.swift; sourceTree = "<group>"; };
+		6526D0AA2B52B26E0037EE0F /* InvitationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvitationCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +87,50 @@
 				6526D0682B50F6830037EE0F /* AppDelegate.swift */,
 				6526D06A2B50F6830037EE0F /* SceneDelegate.swift */,
 				6526D06C2B50F6830037EE0F /* ViewController.swift */,
+				6526D0872B512DA10037EE0F /* IInfo */,
+				6526D07E2B50F6B10037EE0F /* API */,
 				6526D06E2B50F6830037EE0F /* Main.storyboard */,
 				6526D0712B50F6840037EE0F /* Assets.xcassets */,
 				6526D0732B50F6840037EE0F /* LaunchScreen.storyboard */,
 				6526D0762B50F6840037EE0F /* Info.plist */,
 			);
 			path = NewApp;
+			sourceTree = "<group>";
+		};
+		6526D07E2B50F6B10037EE0F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6526D07C2B50F6AE0037EE0F /* APIController.swift */,
+				6526D0852B512B600037EE0F /* DataStruct.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6526D0872B512DA10037EE0F /* IInfo */ = {
+			isa = PBXGroup;
+			children = (
+				6526D0812B51145F0037EE0F /* InfoViewController.swift */,
+				6526D0822B51145F0037EE0F /* InfoViewController.xib */,
+				6526D0882B512DC80037EE0F /* InfoViewModel.swift */,
+				6526D08A2B52676D0037EE0F /* SubViews */,
+			);
+			path = IInfo;
+			sourceTree = "<group>";
+		};
+		6526D08A2B52676D0037EE0F /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				6526D08F2B5268A30037EE0F /* FriendListViewController.swift */,
+				6526D0902B5268A30037EE0F /* FriendListViewController.xib */,
+				6526D09B2B527EB00037EE0F /* FriendListSearchResultTableViewController.swift */,
+				6526D0932B526C9B0037EE0F /* FriendViewCell.swift */,
+				6526D0942B526C9B0037EE0F /* FriendViewCell.xib */,
+				6526D0A52B52B2320037EE0F /* InvitationListCollectionViewController.swift */,
+				6526D0A62B52B2320037EE0F /* InvitationListCollectionViewController.xib */,
+				6526D0A92B52B26E0037EE0F /* InvitationCollectionViewCell.swift */,
+				6526D0AA2B52B26E0037EE0F /* InvitationCollectionViewCell.xib */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +191,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6526D0A82B52B2320037EE0F /* InvitationListCollectionViewController.xib in Resources */,
 				6526D0752B50F6840037EE0F /* LaunchScreen.storyboard in Resources */,
+				6526D0922B5268A30037EE0F /* FriendListViewController.xib in Resources */,
+				6526D0962B526C9B0037EE0F /* FriendViewCell.xib in Resources */,
+				6526D0AC2B52B26E0037EE0F /* InvitationCollectionViewCell.xib in Resources */,
 				6526D0722B50F6840037EE0F /* Assets.xcassets in Resources */,
+				6526D0842B51145F0037EE0F /* InfoViewController.xib in Resources */,
 				6526D0702B50F6830037EE0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +209,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6526D07D2B50F6AE0037EE0F /* APIController.swift in Sources */,
+				6526D0912B5268A30037EE0F /* FriendListViewController.swift in Sources */,
 				6526D06D2B50F6830037EE0F /* ViewController.swift in Sources */,
+				6526D0952B526C9B0037EE0F /* FriendViewCell.swift in Sources */,
+				6526D0A72B52B2320037EE0F /* InvitationListCollectionViewController.swift in Sources */,
+				6526D0862B512B600037EE0F /* DataStruct.swift in Sources */,
 				6526D0692B50F6830037EE0F /* AppDelegate.swift in Sources */,
+				6526D0AB2B52B26E0037EE0F /* InvitationCollectionViewCell.swift in Sources */,
+				6526D0892B512DC80037EE0F /* InfoViewModel.swift in Sources */,
+				6526D09C2B527EB00037EE0F /* FriendListSearchResultTableViewController.swift in Sources */,
 				6526D06B2B50F6830037EE0F /* SceneDelegate.swift in Sources */,
+				6526D0832B51145F0037EE0F /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

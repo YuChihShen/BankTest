@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendListViewController" customModule="NewApp" customModuleProvider="target">
+            <connections>
+                <outlet property="friendListTable" destination="wHc-IQ-BmI" id="jE7-Nj-dsE"/>
+                <outlet property="searchBar" destination="grr-np-0ms" id="aCS-bR-ulG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="想轉一筆給誰呢？" translatesAutoresizingMaskIntoConstraints="NO" id="grr-np-0ms">
+                    <rect key="frame" x="30" y="15" width="276" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="eZq-WC-Jy5"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_add_friend" translatesAutoresizingMaskIntoConstraints="NO" id="XfR-5o-wc7">
+                    <rect key="frame" x="321" y="21" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="XfR-5o-wc7" secondAttribute="height" multiplier="1:1" id="RqT-2W-csH"/>
+                        <constraint firstAttribute="height" constant="24" id="TIp-4M-CDR"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="always" style="plain" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHc-IQ-BmI">
+                    <rect key="frame" x="0.0" y="61" width="375" height="606"/>
+                    <inset key="separatorInset" minX="105" minY="0.0" maxX="30" maxY="0.0"/>
+                    <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wHc-IQ-BmI" firstAttribute="top" secondItem="grr-np-0ms" secondAttribute="bottom" constant="10" id="8Jl-vy-XGH"/>
+                <constraint firstAttribute="trailing" secondItem="wHc-IQ-BmI" secondAttribute="trailing" id="8kj-0a-2dc"/>
+                <constraint firstAttribute="trailing" secondItem="grr-np-0ms" secondAttribute="trailing" constant="69" id="FOb-Xn-kKg"/>
+                <constraint firstItem="wHc-IQ-BmI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XSU-Gh-xvx"/>
+                <constraint firstAttribute="bottom" secondItem="wHc-IQ-BmI" secondAttribute="bottom" id="e69-Wv-aBp"/>
+                <constraint firstAttribute="top" secondItem="grr-np-0ms" secondAttribute="top" constant="-15" id="fwX-fz-uNL"/>
+                <constraint firstItem="grr-np-0ms" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="gMx-73-HAA"/>
+                <constraint firstAttribute="trailing" secondItem="XfR-5o-wc7" secondAttribute="trailing" constant="30" id="nHc-sD-e5f"/>
+                <constraint firstItem="XfR-5o-wc7" firstAttribute="centerY" secondItem="grr-np-0ms" secondAttribute="centerY" id="rbM-4D-sYe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_add_friend" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
