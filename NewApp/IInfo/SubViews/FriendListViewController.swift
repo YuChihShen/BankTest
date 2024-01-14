@@ -23,10 +23,17 @@ class FriendListViewController: UIViewController, UITableViewDelegate, UITableVi
         friendListTable.delegate = self
         friendListTable.dataSource = self
         
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action:  #selector(endEditing))
+        friendListTable.addGestureRecognizer(gestureRecognizer)
+        
         let nib = UINib(nibName: friendCellIdentifier, bundle: nil)
         friendListTable.register(nib, forCellReuseIdentifier: friendCellIdentifier)
         
         self.searchBar.delegate = self
+    }
+    
+    @objc func endEditing() {
+        self.view.endEditing(false)
     }
     
     

@@ -25,14 +25,23 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
     @IBOutlet weak var friendStackView: UIStackView!
     @IBOutlet weak var chatCountLabel: UILabel!
     @IBOutlet weak var friendCountLabel: UILabel!
+    @IBOutlet weak var stackViewMask: UIView!
     @IBOutlet var masks: [UIView]!
     
     let viewModel = InfoViewModel()
     let refreshControl = UIRefreshControl()
     var selectedBtn:selectedBtn = .btn1
-    
     var friendListVC:FriendListViewController? = nil
     var invitationVC:InvitationListCollectionViewController? = nil
+    var KeyboardShowConstraintArr:[NSLayoutConstraint] = []
+    var KeyboardHideConstraintArr:[NSLayoutConstraint] = []
+    var isKeyboardShow = false {
+        didSet {
+            self.stackViewMask.isHidden = true
+            KeyboardShowConstraintArr.forEach({ $0.isActive = isKeyboardShow })
+            KeyboardHideConstraintArr.forEach({ $0.isActive = !isKeyboardShow })
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +49,20 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
         loadData()
         setUI()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         self.friendListVC?.friendListTable.addSubview(refreshControl)
         refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        self.view.endEditing(false)
     }
     
     @objc func loadData() {
@@ -74,8 +91,8 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
         friendCountLabel.layer.backgroundColor = #colorLiteral(red: 0.9756097198, green: 0.6984522939, blue: 0.8620457649, alpha: 1)
         friendCountLabel.isHidden = true
         
-        setFriendListVC()
         setInvitationVC()
+        setFriendListVC()
         setAddFriendBtn()
         setLinkLabelText()
     }
@@ -121,12 +138,18 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
     func setFriendListVC() {
         self.friendListVC = FriendListViewController(nibName: "FriendListViewController", bundle: nil)
         if let vc = self.friendListVC {
-            defaultView.addSubview(vc.view)
+            view.addSubview(vc.view)
             vc.view.translatesAutoresizingMaskIntoConstraints = false
-            vc.view.topAnchor.constraint(equalTo: defaultView.topAnchor).isActive = true
-            vc.view.leadingAnchor.constraint(equalTo: defaultView.leadingAnchor).isActive = true
-            vc.view.trailingAnchor.constraint(equalTo: defaultView.trailingAnchor).isActive = true
-            vc.view.bottomAnchor.constraint(equalTo: defaultView.bottomAnchor).isActive = true
+            vc.view.leadingAnchor.constraint(equalTo: friendStackView.leadingAnchor).isActive = true
+            vc.view.trailingAnchor.constraint(equalTo: friendStackView.trailingAnchor).isActive = true
+            vc.view.bottomAnchor.constraint(equalTo: friendStackView.bottomAnchor).isActive = true
+            
+            let keyboardHideConstraint = vc.view.topAnchor.constraint(equalTo: defaultView.topAnchor)
+            let keyboardShowConstraint = vc.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
+            self.KeyboardHideConstraintArr.append(keyboardHideConstraint)
+            self.KeyboardShowConstraintArr.append(keyboardShowConstraint)
+            keyboardHideConstraint.isActive = true
+            
             vc.view.isHidden = true
         }
     }
@@ -161,18 +184,47 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
         friendCountLabel.isHidden = !(viewModel.friendList.count > 0)
         friendCountLabel.text = "\(viewModel.friendList.filter({$0.status == 2}).count)"
         
-        if let friendListVC = self.friendListVC {
-            friendListVC.view.isHidden = !(viewModel.friendList.count > 0)
-            friendListVC.friendList = viewModel.friendList
-            friendListVC.friendListTable.reloadData()
-        }
-        
         if let invitationVC = self.invitationVC {
             invitationVC.view.isHidden = !(viewModel.candidateFriendList.count > 0)
             invitationVC.candidateFriendList = viewModel.candidateFriendList
             invitationVC.collectionView.reloadData()
         }
         
+        if let friendListVC = self.friendListVC {
+            friendListVC.view.isHidden = !(viewModel.friendList.count > 0)
+            friendListVC.friendList = viewModel.friendList
+            friendListVC.friendListTable.reloadData()
+        }
+        
         self.refreshControl.endRefreshing()
+    }
+    // MARK: - Notification
+    @objc func keyboardWillShow() {
+        self.stackViewMask.isHidden = false
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.3, delay: 0, animations: {
+            if (self.invitationVC?.view.isHidden ?? true) {
+                self.friendListVC?.view.frame.origin.y += (self.view.safeAreaLayoutGuide.layoutFrame.minY - self.friendStackView.frame.minY - 37)
+            } else {
+                self.friendListVC?.view.frame.origin.y += (self.view.safeAreaLayoutGuide.layoutFrame.minY - (self.invitationVC?.view.frame.height ?? 0) - self.friendStackView.frame.minY - 37)
+            }
+        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.isKeyboardShow = true
+        }
+        
+        
+    }
+    
+    @objc func keyboardWillHide() {
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.3, delay: 0, animations: {
+            if (self.invitationVC?.view.isHidden ?? true) {
+                self.friendListVC?.view.frame.origin.y -= (self.view.safeAreaLayoutGuide.layoutFrame.minY - self.friendStackView.frame.minY - 37)
+            } else {
+                self.friendListVC?.view.frame.origin.y -= (self.view.safeAreaLayoutGuide.layoutFrame.minY - (self.invitationVC?.view.frame.height ?? 0) - self.friendStackView.frame.minY - 37)
+            }
+        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.isKeyboardShow = false
+        }
     }
 }

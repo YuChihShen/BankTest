@@ -3,4 +3,102 @@
    uuid = "10FFAE1A-2E43-4D53-84AB-360B7502D2A1"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F66432E2-F28F-44C1-8BC0-A7949C777A1E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewApp/IInfo/InfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "setFriendListVC()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F66432E2-F28F-44C1-8BC0-A7949C777A1E - d88038a318924e39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewApp.InfoViewController.didUpdateDataWithViewModel(viewModel: NewApp.InfoViewModel) -&gt; ()"
+                  moduleName = "NewApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yu-chihshen/Desktop/NewApp/NewApp/IInfo/InfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  uuid = "F66432E2-F28F-44C1-8BC0-A7949C777A1E - f77eb86ae4ede317"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewApp.InfoViewController.setFriendListVC() -&gt; ()"
+                  moduleName = "NewApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yu-chihshen/Desktop/NewApp/NewApp/IInfo/InfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "5340">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6ECAC06C-65B4-4749-A6FD-4C3117134142"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewApp/IInfo/SubViews/FriendListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "endEditing()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6ECAC06C-65B4-4749-A6FD-4C3117134142 - 8e6efaa42e2cd117"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewApp.FriendListViewController.endEditing() -&gt; ()"
+                  moduleName = "NewApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yu-chihshen/Desktop/NewApp/NewApp/IInfo/SubViews/FriendListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "6ECAC06C-65B4-4749-A6FD-4C3117134142 - 8e6efaa42e2cd136"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewApp.FriendListViewController.endEditing() -&gt; ()"
+                  moduleName = "NewApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yu-chihshen/Desktop/NewApp/NewApp/IInfo/SubViews/FriendListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
