@@ -33,28 +33,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoc-W2-c8Q">
-                                <rect key="frame" x="106.66666666666669" y="205.33333333333334" width="180" height="50"/>
+                                <rect key="frame" x="78.666666666666671" y="197.66666666666666" width="235.66666666666663" height="65.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zoc-W2-c8Q" secondAttribute="height" multiplier="36:10" id="Myw-zc-CyQ"/>
-                                    <constraint firstAttribute="width" constant="180" id="a0O-nq-v2H"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="無好友" cornerStyle="large"/>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wZ-dj-FCF">
-                                <rect key="frame" x="106.66666666666669" y="297.33333333333331" width="180" height="50"/>
+                                <rect key="frame" x="78.666666666666671" y="335.66666666666669" width="235.66666666666663" height="65.333333333333314"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="0pj-uS-C4Z"/>
                                     <constraint firstAttribute="width" secondItem="0wZ-dj-FCF" secondAttribute="height" multiplier="36:10" id="7RE-oW-64x"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="好友列表無邀請" cornerStyle="large"/>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97J-9F-vpg">
-                                <rect key="frame" x="106.66666666666669" y="389.33333333333331" width="180" height="50"/>
+                                <rect key="frame" x="78.666666666666671" y="473.66666666666669" width="235.66666666666663" height="65.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="97J-9F-vpg" secondAttribute="height" multiplier="36:10" id="2Ah-nK-uRW"/>
-                                    <constraint firstAttribute="width" constant="180" id="Jfv-vO-6VL"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="好友列表含邀請好友" cornerStyle="large"/>
@@ -64,10 +61,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Zoc-W2-c8Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DPL-Bd-ryr"/>
-                            <constraint firstItem="0wZ-dj-FCF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.7" id="ICm-rl-ie7"/>
+                            <constraint firstItem="0wZ-dj-FCF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.8" id="ICm-rl-ie7"/>
                             <constraint firstItem="Zoc-W2-c8Q" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.5" id="JKx-Tn-Lxf"/>
+                            <constraint firstItem="97J-9F-vpg" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.6" id="N0y-1q-SfQ"/>
                             <constraint firstItem="0wZ-dj-FCF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UVd-GW-d4E"/>
-                            <constraint firstItem="97J-9F-vpg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.9" id="XeX-rF-OEO"/>
+                            <constraint firstItem="Zoc-W2-c8Q" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.6" id="Wy6-2E-DQV"/>
+                            <constraint firstItem="97J-9F-vpg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.1" id="XeX-rF-OEO"/>
+                            <constraint firstItem="0wZ-dj-FCF" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.6" id="n5A-Ev-u85"/>
                             <constraint firstItem="97J-9F-vpg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="r0L-Jz-3Yk"/>
                         </constraints>
                     </view>
