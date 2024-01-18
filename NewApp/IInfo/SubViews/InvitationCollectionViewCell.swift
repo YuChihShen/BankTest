@@ -23,7 +23,8 @@ class InvitationCollectionViewCell: UICollectionViewCell {
         self.layer.shadowColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.1).cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 4.0)
         self.layer.shadowRadius = 16.0
-        self.layer.masksToBounds = false
+        self.layer.shadowOpacity = 0.5
+        self.layer.masksToBounds = false;
     }
     
     override func prepareForReuse() {

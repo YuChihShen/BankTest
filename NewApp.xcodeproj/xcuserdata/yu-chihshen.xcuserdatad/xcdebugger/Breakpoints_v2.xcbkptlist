@@ -7,176 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F66432E2-F28F-44C1-8BC0-A7949C777A1E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NewApp/IInfo/InfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "setFriendListVC()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F66432E2-F28F-44C1-8BC0-A7949C777A1E - d88038a318924e39"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NewApp.InfoViewController.didUpdateDataWithViewModel(viewModel: NewApp.InfoViewModel) -&gt; ()"
-                  moduleName = "NewApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yu-chihshen/Desktop/NewApp/NewApp/IInfo/InfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "436">
-               </Location>
-               <Location
-                  uuid = "F66432E2-F28F-44C1-8BC0-A7949C777A1E - f77eb86ae4ede317"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NewApp.InfoViewController.setFriendListVC() -&gt; ()"
-                  moduleName = "NewApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yu-chihshen/Desktop/NewApp/NewApp/IInfo/InfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "5340">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6ECAC06C-65B4-4749-A6FD-4C3117134142"
+            uuid = "994FD24D-9197-47D4-A965-C6ADD8DFB5A1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NewApp/IInfo/SubViews/FriendListViewController.swift"
+            filePath = "NewApp/IInfo/SubViews/FakeInvitationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
-            landmarkName = "endEditing()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6ECAC06C-65B4-4749-A6FD-4C3117134142 - 8e6efaa42e2cd117"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NewApp.FriendListViewController.endEditing() -&gt; ()"
-                  moduleName = "NewApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yu-chihshen/Desktop/NewApp/NewApp/IInfo/SubViews/FriendListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "6ECAC06C-65B4-4749-A6FD-4C3117134142 - 8e6efaa42e2cd136"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NewApp.FriendListViewController.endEditing() -&gt; ()"
-                  moduleName = "NewApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yu-chihshen/Desktop/NewApp/NewApp/IInfo/SubViews/FriendListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "07DF3EA4-3C14-44CC-84EE-52F422D18D67"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NewApp/IInfo/InfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "loadXib()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6DF4DC01-8F7E-4137-8489-81FC030F03EE"
+            uuid = "2DA1017A-C749-4DF9-AC26-45F9EC9A3AF4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NewApp/IInfo/InfoViewController.swift"
+            filePath = "NewApp/IInfo/SubViews/FakeInvitationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "setUI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "531B3323-2A2F-4C2D-BBAC-9983D0C235D2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NewApp/IInfo/InfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "setUI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5E98D58E-7D3E-4C5F-AF91-1B34AA7DD01B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NewApp/IInfo/InfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "setInvitationVC()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F800D6F1-593A-4868-8905-44FDD94F1F4A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NewApp/IInfo/InfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "setFriendListVC()"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "tapView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

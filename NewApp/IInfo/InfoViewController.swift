@@ -33,6 +33,21 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
     var selectedBtn:selectedBtn = .btn1
     var friendListVC:FriendListViewController? = nil
     var invitationVC:InvitationListCollectionViewController? = nil
+    var fakeInvitationView:FakeInvitationView? = nil
+    
+    var isInvitationViewFold = true {
+        didSet {
+            if shouldShowInvitationView {
+                self.fakeInvitationView?.isHidden = !isInvitationViewFold
+                self.invitationVC?.view.isHidden = isInvitationViewFold
+            } else {
+                self.fakeInvitationView?.isHidden = true
+                self.invitationVC?.view.isHidden = true
+            }
+        }
+    }
+    var shouldShowInvitationView = false
+    
     var KeyboardShowConstraintArr:[NSLayoutConstraint] = []
     var KeyboardHideConstraintArr:[NSLayoutConstraint] = []
     var isKeyboardShow = false {
@@ -155,6 +170,17 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
     }
     
     func setInvitationVC() {
+        let fakeInvitationView = FakeInvitationView(frame: CGRect(x: 0, y: 0, width: 375, height: 100))
+        self.friendStackView.insertArrangedSubview(fakeInvitationView, at: 0)
+        fakeInvitationView.translatesAutoresizingMaskIntoConstraints = false
+        fakeInvitationView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        fakeInvitationView.widthAnchor.constraint(equalToConstant: 375).isActive = true
+        fakeInvitationView.isHidden = true
+        fakeInvitationView.didTapView = {
+            self.isInvitationViewFold.toggle()
+        }
+        self.fakeInvitationView = fakeInvitationView
+        
         self.invitationVC = InvitationListCollectionViewController(nibName: "InvitationListCollectionViewController", bundle: nil)
         if let vc = self.invitationVC {
             vc.view.isHidden = true
@@ -162,6 +188,9 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
             vc.view.translatesAutoresizingMaskIntoConstraints = false
             vc.view.heightAnchor.constraint(equalToConstant: 170).isActive = true
             vc.view.widthAnchor.constraint(equalToConstant: 315).isActive = true
+            vc.didTapView = {
+                self.isInvitationViewFold.toggle()
+            }
         }
     }
     
@@ -184,8 +213,13 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
         friendCountLabel.isHidden = !(viewModel.friendList.count > 0)
         friendCountLabel.text = "\(viewModel.friendList.filter({$0.status == 2}).count)"
         
+        self.shouldShowInvitationView = (viewModel.candidateFriendList.count > 0)
+        if shouldShowInvitationView {
+            self.fakeInvitationView?.configureViewWithFriend(friend: viewModel.candidateFriendList.first!)
+            self.isInvitationViewFold = true
+        }
+        
         if let invitationVC = self.invitationVC {
-            invitationVC.view.isHidden = !(viewModel.candidateFriendList.count > 0)
             invitationVC.candidateFriendList = viewModel.candidateFriendList
             invitationVC.collectionView.reloadData()
         }

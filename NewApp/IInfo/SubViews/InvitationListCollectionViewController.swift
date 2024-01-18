@@ -12,12 +12,20 @@ private let reuseIdentifier = "InvitationCollectionViewCell"
 class InvitationListCollectionViewController: UICollectionViewController {
     
     var candidateFriendList:[Friend] = []
+    var didTapView:(() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let nib = UINib(nibName: reuseIdentifier, bundle: nil)
         self.collectionView!.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapView))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func tapView() {
+        self.didTapView?()
     }
 
     // MARK: UICollectionViewDataSource
