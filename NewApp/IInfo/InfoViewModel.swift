@@ -87,23 +87,24 @@ class InfoViewModel: NSObject {
         }
         
         group.notify(queue: .main) {
-            var dict = [:]
+//            var dict:[String:Friend] = [:]
             var friendToTalList = self.friendList1
             friendToTalList.append(contentsOf: self.friendList2)
-            friendToTalList.forEach { friend in
-                if let member = dict[friend.fid] as? Friend {
-                    if let memberUpdateTime = member.updateTime,
-                       let friendUpdateTime  = friend.updateTime {
-                        dict[friend.fid] = (friendUpdateTime > memberUpdateTime) ? friend : member
-                    }
-                } else {
-                    dict[friend.fid] = friend
-                }
-            }
-            self.friendList = (dict.map{ $0.value } as? [Friend]) ?? []
-            self.friendList.sort(by: {(Int($0.fid) ?? 0) < (Int($1.fid) ?? 0)})
-            self.candidateFriendList = self.friendList.filter({ $0.status == 0 })
-            self.friendList = self.friendList.filter({ $0.status != 0 })
+            self.setCandidateFriendListAndFriendListWithArray(array: friendToTalList)
+//            friendToTalList.forEach { friend in
+//                if let member = dict[friend.fid] {
+//                    if let memberUpdateTime = member.updateTime,
+//                       let friendUpdateTime  = friend.updateTime {
+//                        dict[friend.fid] = (friendUpdateTime > memberUpdateTime) ? friend : member
+//                    }
+//                } else {
+//                    dict[friend.fid] = friend
+//                }
+//            }
+//            self.friendList = (dict.map{ $0.value } as? [Friend]) ?? []
+//            self.friendList.sort(by: {(Int($0.fid) ?? 0) < (Int($1.fid) ?? 0)})
+//            self.candidateFriendList = self.friendList.filter({ $0.status == 0 })
+//            self.friendList = self.friendList.filter({ $0.status != 0 })
             
             self.delegate?.didUpdateDataWithViewModel(viewModel: self)
         }
@@ -139,6 +140,24 @@ class InfoViewModel: NSObject {
         group.notify(queue: .main) {
             self.delegate?.didUpdateDataWithViewModel(viewModel: self)
         }
+    }
+    
+    func setCandidateFriendListAndFriendListWithArray(array:[Friend]) {
+        var dict:[String:Friend] = [:]
+        array.forEach { friend in
+            if let member = dict[friend.fid] {
+                if let memberUpdateTime = member.updateTime,
+                   let friendUpdateTime  = friend.updateTime {
+                    dict[friend.fid] = (friendUpdateTime > memberUpdateTime) ? friend : member
+                }
+            } else {
+                dict[friend.fid] = friend
+            }
+        }
+        self.friendList = (dict.map{ $0.value } as? [Friend]) ?? []
+        self.friendList.sort(by: {(Int($0.fid) ?? 0) < (Int($1.fid) ?? 0)})
+        self.candidateFriendList = self.friendList.filter({ $0.status == 0 })
+        self.friendList = self.friendList.filter({ $0.status != 0 })
     }
 
 }

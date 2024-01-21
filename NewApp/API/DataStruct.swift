@@ -46,3 +46,66 @@ struct Friend:Codable {
         }
     }
 }
+
+let testData = """
+{
+  "response": [
+    {
+      "name": "黃靖僑",
+      "status": 1,
+      "isTop": "0",
+      "fid": "001",
+      "updateDate": "2019/08/02"
+    },
+    {
+      "name": "翁勳儀",
+      "status": 1,
+      "isTop": "1",
+      "fid": "002",
+      "updateDate": "2019/08/01"
+    },
+    {
+      "name": "林宜真",
+      "status": 1,
+      "isTop": "0",
+      "fid": "012",
+      "updateDate": "2019/08/01"
+    },
+    {
+      "name": "黃靖僑",
+      "status": 0,
+      "isTop": "0",
+      "fid": "001",
+      "updateDate": "20190801"
+    },
+    {
+      "name": "翁勳儀",
+      "status": 2,
+      "isTop": "1",
+      "fid": "002",
+      "updateDate": "20190802"
+    },
+    {
+      "name": "洪佳妤",
+      "status": 1,
+      "isTop": "0",
+      "fid": "003",
+      "updateDate": "20190804"
+    },
+    {
+      "name": "梁立璇",
+      "status": 1,
+      "isTop": "0",
+      "fid": "004",
+      "updateDate": "20190801"
+    },
+    {
+      "name": "梁立璇",
+      "status": 1,
+      "isTop": "0",
+      "fid": "005",
+      "updateDate": "20190804"
+    }
+  ]
+}
+""".data(using: .utf8)!

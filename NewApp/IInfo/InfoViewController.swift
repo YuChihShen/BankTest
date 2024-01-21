@@ -27,6 +27,7 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
     @IBOutlet weak var friendCountLabel: UILabel!
     @IBOutlet weak var stackViewMask: UIView!
     @IBOutlet var masks: [UIView]!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     let viewModel = InfoViewModel()
     let refreshControl = UIRefreshControl()
@@ -159,7 +160,7 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
             vc.view.trailingAnchor.constraint(equalTo: friendStackView.trailingAnchor).isActive = true
             vc.view.bottomAnchor.constraint(equalTo: friendStackView.bottomAnchor).isActive = true
             
-            let keyboardHideConstraint = vc.view.topAnchor.constraint(equalTo: defaultView.topAnchor)
+            let keyboardHideConstraint = vc.view.topAnchor.constraint(equalTo: scrollView.topAnchor)
             let keyboardShowConstraint = vc.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
             self.KeyboardHideConstraintArr.append(keyboardHideConstraint)
             self.KeyboardShowConstraintArr.append(keyboardShowConstraint)
@@ -235,6 +236,7 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
     // MARK: - Notification
     @objc func keyboardWillShow() {
         self.stackViewMask.isHidden = false
+        guard !self.isKeyboardShow else { return }
         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.3, delay: 0, animations: {
             if (self.invitationVC?.view.isHidden ?? true) {
                 self.friendListVC?.view.frame.origin.y += (self.view.safeAreaLayoutGuide.layoutFrame.minY - self.friendStackView.frame.minY - 37)
@@ -250,6 +252,7 @@ class InfoViewController: UIViewController, infoDataDelegate, UISearchBarDelegat
     }
     
     @objc func keyboardWillHide() {
+        guard self.isKeyboardShow else { return }
         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.3, delay: 0, animations: {
             if (self.invitationVC?.view.isHidden ?? true) {
                 self.friendListVC?.view.frame.origin.y -= (self.view.safeAreaLayoutGuide.layoutFrame.minY - self.friendStackView.frame.minY - 37)

@@ -12,7 +12,19 @@ class FriendListViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var friendListTable: UITableView!
     
-    var friendList:[Friend] = []
+    var friendList:[Friend] = [] {
+        didSet {
+            if (self.isSearchActive) {
+                if searchBar.text?.count ?? 0 > 0 {
+                    self.filteredFriendList = friendList.filter({ $0.name.contains(searchBar.text ?? "") })
+                    self.friendListTable.reloadData()
+                } else {
+                    self.filteredFriendList = friendList
+                    self.friendListTable.reloadData()
+                }
+            }
+        }
+    }
     var filteredFriendList:[Friend] = []
     var isSearchActive = false
     let friendCellIdentifier = "FriendViewCell"
@@ -56,6 +68,7 @@ class FriendListViewController: UIViewController, UITableViewDelegate, UITableVi
     // MARK: - UISearchBarDelegate
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.isSearchActive = true
+        self.filteredFriendList = friendList
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

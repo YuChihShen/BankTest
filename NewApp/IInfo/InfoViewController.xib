@@ -20,6 +20,7 @@
                 <outlet property="idLabel" destination="Lra-n5-KBp" id="cmh-ga-3x7"/>
                 <outlet property="linkLabel" destination="MgU-gM-mUR" id="W0D-bK-D1s"/>
                 <outlet property="nameLabel" destination="AbX-5x-0gO" id="RVe-ZI-DSF"/>
+                <outlet property="scrollView" destination="QR5-tq-De0" id="8zq-bN-35y"/>
                 <outlet property="stackViewMask" destination="nH2-Up-etx" id="cfx-tK-6Yv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="masks" destination="leq-te-ATk" collectionClass="NSMutableArray" id="26M-6p-lgv"/>
